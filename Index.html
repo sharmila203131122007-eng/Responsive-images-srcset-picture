@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Responsive Images Demo</h1>
+
+    <picture>
+        <source
+            media="(max-width: 600px)"
+            srcset="images/mobile.jpg">
+
+        <source
+            media="(min-width: 601px)"
+            srcset="images/desktop.jpg">
+
+        <img
+            src="images/desktop.jpg"
+            srcset="images/mobile.jpg 480w,
+                    images/desktop.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 80vw"
+            alt="Beautiful nature landscape">
+    </picture>
+
+</body>
+</html>
